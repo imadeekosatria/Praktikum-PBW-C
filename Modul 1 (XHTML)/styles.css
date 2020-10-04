@@ -1,0 +1,65 @@
+
+body{
+    background-image: url(background\ web.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#tugas{
+    color: white;
+    background-color: violet;
+    text-align: center;
+}
+
+h3{
+    color: white;
+    text-align: center;
+}
+
+#ig{
+    background-color: transparent;
+}
+
+
+iframe{
+    padding : 70px; 
+    width : 620; 
+    height: 515;
+}
+
+#Yt{
+    background-color: transparent;
+    padding-left: 2px;
+}
+
+p{
+    color: white;
+    text-align: center;
+}
+
+ol{
+    color: white;
+}
+li{
+    color: white;
+    size: 18;
+}
+ul{
+    color: white;  
+}
+
+#sumber{
+    text-align: unset;
+}
+
+#materi{
+    size: 30;
+    text-align: unset;
+}
+
+#apps{
+    size: 30;
+    text-align: unset;
+}
+
