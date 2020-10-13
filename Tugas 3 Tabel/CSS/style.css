@@ -1,0 +1,32 @@
+body{
+    background-image: url(../img/Background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+table{
+    font-family: arial, sans-serif;
+    width: 100%;
+    border-spacing: 3px;
+    border: 1px solid #FFFFFF;
+}
+td, th{
+    border: 1px solid #FFFFFF;
+    text-align: center;
+    padding: 15px;
+}
+tr:nth-child(even){
+    background-color: #dddddd;
+}
+
+h1, h2, h3{
+    text-align: center;
+}
+
+img.icon{
+    height: 100px;
+    width: 100px;
+}
+
