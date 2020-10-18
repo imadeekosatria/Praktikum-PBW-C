@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+#videoback{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.konten{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+#spotify{
+    float: right;
+    padding-right: 40px;
+}
+
+input{
+    margin-left: 30%;
+}
+
+h1,p{
+    text-align: center;
+}
+
+#masuk,#daftar{
+    margin-left: 30%;
+}
