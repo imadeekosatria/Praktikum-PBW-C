@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id-ID">
+    <head>
+        <link rel="stylesheet" href="CSS/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="CSS/style.css">
+        <title>Tugas 5 JavaScript Kalkulator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h5>Kalkulator</h5>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="number" class="form-control" id="bil1" name="bila1" placeholder="Bilangan 1">
+                            </div>
+                            <button type="button" class="btn btn-outline-primary box" onclick="tambah()">+</button>
+                            <button type="button" class="btn btn-outline-primary box" onclick="kurang()">-</button>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="number" class="form-control" id="bil2" name="bila2" placeholder="Bilangan 2">
+                            </div>
+                            <button type="button" class="btn btn-outline-primary box" onclick="kali()">x</button>
+                            <button type="button" class="btn btn-outline-primary box" onclick="bagi()">:</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-4">
+                    <br>
+                    <h4>Hasil</h4>
+                    <p id="hasil"></p>
+                </div>
+              </div>
+        </div>
+        <script>
+            function tambah(){
+                var a = document.getElementById("bil1").value;
+                var b = document.getElementById("bil2").value;
+                document.getElementById("hasil").innerHTML = (a + b);
+            }
+
+            function kurang(){
+                var a = document.getElementById("bil1").value;
+                var b = document.getElementById("bil2").value;
+                document.getElementById("hasil").innerHTML = a - b;
+            }
+            function kali(){
+                var a = document.getElementById("bil1").value;
+                var b = document.getElementById("bil2").value;
+                document.getElementById("hasil").innerHTML = a * b;
+            }
+            function bagi(){
+                var a = document.getElementById("bil1").value;
+                var b = document.getElementById("bil2").value;
+                document.getElementById("hasil").innerHTML = a / b;
+            }
+        </script>
+    </body>
+</html>
