@@ -38,24 +38,24 @@
         </div>
         <script>
             function tambah(){
-                var a = document.getElementById("bil1").value;
-                var b = document.getElementById("bil2").value;
+                var a = parseFloat(document.getElementById("bil1").value);
+                var b = parseFloat(document.getElementById("bil2").value);
                 document.getElementById("hasil").innerHTML = (a + b);
             }
 
             function kurang(){
-                var a = document.getElementById("bil1").value;
-                var b = document.getElementById("bil2").value;
+                var a = parseFloat(document.getElementById("bil1").value);
+                var b = parseFloat(document.getElementById("bil2").value);
                 document.getElementById("hasil").innerHTML = a - b;
             }
             function kali(){
-                var a = document.getElementById("bil1").value;
-                var b = document.getElementById("bil2").value;
+                var a = parseFloat(document.getElementById("bil1").value);
+                var b = parseFloat(document.getElementById("bil2").value);
                 document.getElementById("hasil").innerHTML = a * b;
             }
             function bagi(){
-                var a = document.getElementById("bil1").value;
-                var b = document.getElementById("bil2").value;
+                var a = parseFloat(document.getElementById("bil1").value);
+                var b = parseFloat(document.getElementById("bil2").value);
                 document.getElementById("hasil").innerHTML = a / b;
             }
         </script>
