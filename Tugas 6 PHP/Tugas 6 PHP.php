@@ -135,17 +135,22 @@
                             echo "<br>";
                             if ($nilai >= 80){
                                 $grade = "A";
-                                echo "Anda lulus dengan predikat A";
+ 
                             }elseif ($nilai >= 70){
                                 $grade = "B";
-                                echo "Anda lulus dengan predikat B";
+                                
                             }elseif ($nilai >= 60){
                                 $grade = "C";
-                                echo "Anda lulus dengan predikat C";
-                            }else{
+ 
+                            }
+                            
+                            if ($nilai < 60){
                                 $grade = "Anda tidak lulus";
+                                echo $grade;
                                 echo "<br>";
                                 echo "Nilai ambang batas kelulusan adalah 60";
+                            } else{
+                                echo "Anda lulus dengan predikat "; echo $grade;
                             }
                         }
                     ?>
