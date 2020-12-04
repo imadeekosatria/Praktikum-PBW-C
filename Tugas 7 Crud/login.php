@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -11,6 +14,17 @@
     <title>Login!</title>
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link colink" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login</a>
+            </li>
+        </div>     
+    </nav>
      <section class = "Form my-4 mx-5">
         <div class = "container">
             <div class = "row no-gutters">
@@ -47,17 +61,17 @@
                     <form action="">
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <input type="text" placeholder="username" class="form-control my-3 p-4">
+                                <input type="text" name="username" placeholder="username" class="form-control my-3 p-4">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <input type="password" placeholder="*********" class="form-control my-3 p-4">
+                                <input type="password" name="password" placeholder="*******" class="form-control my-3 p-4">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <button type="button" class="btn1 mt-3 mb-5">Login</button>
+                                <button type="button" name="login-submit" class="btn1 mt-3 mb-5">Login</button>
                             </div>
                         </div>
                         <a href="#">Forgot password</a>
