@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 04, 2020 at 06:56 AM
+-- Generation Time: Dec 04, 2020 at 10:00 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -18,27 +18,41 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `data_tugas_7`
+-- Database: `user`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `data`
+-- Table structure for table `user`
 --
 
-CREATE TABLE `data` (
-  `NIM` int(12) NOT NULL,
-  `Nama` char(24) NOT NULL,
-  `Alamat` text NOT NULL
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `username` text NOT NULL,
+  `email` text NOT NULL,
+  `password` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `data`
+-- Indexes for dumped tables
 --
 
-INSERT INTO `data` (`NIM`, `Nama`, `Alamat`) VALUES
-(1808561054, 'I Made Eko Satria Wiguna', 'BTN Mandalika No.19'),
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
