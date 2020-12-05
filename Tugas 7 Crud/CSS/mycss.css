@@ -128,3 +128,13 @@ img {vertical-align: middle;}
   text-align: center;
   color: white;
 }
+
+.error{
+  background-color: #f2dede;
+  color: #a94442;
+  padding: 10px;
+  width: 95%;
+  border-radius: 5px;
+  margin: 20px auto;
+}
+

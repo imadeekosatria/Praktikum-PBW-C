@@ -3,8 +3,9 @@
 ?>
 
 <main>
+    <title>Index</title>
     <?php
-        if (isset($_SESSION['userId'])){
+        if (isset($_SESSION['typeuser'] )){
             echo '<p class="p1">You are logged in!</p>';
         }
         else{
@@ -13,6 +14,3 @@
     ?>    
 </main>
 
-<?php
-    require "footer.php";
-?>

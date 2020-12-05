@@ -1,51 +1,52 @@
 <?php
-
-if (isset($_POST['login-submit'])){
-    require 'dbh.inc.php';
-
-    $user = $_POST['username'];
-    $password = $_POST['password'];
-
-    if(empty($user) || empty($password)){
-        
-        exit();
-    }
-    else{
-        $sql ="SELECT * FROM user WHERE username=? OR email=?;";
-        $stmt = mysqli_stmt_init($conn);
-        if (!mysqli_stmt_prepare($stmt, $sql)){
-            exit();
+    session_start();
+    include "dbh.inc.php";
+    if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['usertype'])) {
+        function validate($data){
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
         }
-        else{
-            mysqli_stmt_bind_param($stmt, "ss", $user, $user);
-            mysqli_stmt_execute($stmt);
-            $result = mysqli_stmt_get_result($stmt);
-            if($row = mysqli_fetch_assoc($result)){
-                $pwdCheck = password_verify($password, $row['password']);
-                if($pwdCheck == false){
-                    header("Location: ../index.php?error=wrongpassword");
-                    exit();
-                }
-                else if($pwdCheck == true){
-                    session_start();
-                    $_SESSION['userId'] = $row['id'];
-                    $_SESSION['userUid'] = $row['username'];
 
-                    header("Location: ../index.php?login=success");
-                    exit();
+        $user = validate($_POST['username']);
+        $pwd = validate($_POST['password']);
+        $type = validate($_POST['usertype']);
+
+        if (empty($user)) {
+            header("Location: ../index.php?error=user name is required");
+            exit();
+        }else if(empty($pwd)){
+            header("Location: ../index.php?error=password is required");
+            exit();
+        }else{
+            $sql = "SELECT * FROM user WHERE username='$user' AND password='$pwd'";
+            $result = mysqli_query($conn, $sql);
+
+            if (mysqli_num_rows($result)) {
+                $row = mysqli_fetch_assoc($result);
+                if ($row['username'] === $user && $row['password'] === $pwd && $row['typeuser'] === $type) {
+                    if ($row['typeuser'] === 'admin') {
+                        $_SESSION['username'] = $row=['username'];
+                        $_SESSION['typeuser'] = $row=['typeuser'];
+                        $_SESSION['id'] = $row=['id'];
+                        header("Location: ../data base admin.php");
+                        exit(); 
+                    }elseif($row['typeuser'] === 'user'){
+                        $_SESSION['username'] = $row=['username'];
+                        $_SESSION['typeuser'] = $row=['typeuser'];
+                        $_SESSION['id'] = $row=['id'];
+                        header("Location: ../data base user.php");
+                        exit();
+                    }
                 }
-                else{
-                    header("Location: ../index.php?error=wrongpassword");
-                    exit();
-                }
-            }
-            else{
-                header("Location: ../index.php?error=nouser");
+            }else{
+                header("Location: ../index.php?error=incorrect username and password is required");
                 exit();
             }
         }
+    }else{
+        header("Location: ../index.php");
+        exit();
     }
-}
-else{
-    exit();
-}
+?>
