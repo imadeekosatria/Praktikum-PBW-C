@@ -34,10 +34,10 @@
                                 <li data-target="#mycarousel" data-slide-to="2"></li>
                                 </ol>
                                     <div class="carousel-inner">
-                                        <div class="carousel-item active" data-interval="2000">
+                                        <div class="carousel-item active" data-interval="4500">
                                             <img src="img/mina 1.jpg" class="img-fluid" alt="mina 1">
                                         </div>
-                                        <div class="carousel-item" data-interval="2000">
+                                        <div class="carousel-item" data-interval="4500">
                                             <img src="img/mina 2.jpg" class="img-fluid" alt="mina 2">
                                         </div>
                                         <div class="carousel-item">
