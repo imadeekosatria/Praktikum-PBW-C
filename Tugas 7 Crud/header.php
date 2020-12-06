@@ -19,13 +19,7 @@
                       </li>
                     </ul>
                     <?php
-                        if (isset($_SESSION['id'])) {
-                          echo '<ul class="navbar-nav ml-md-auto">
-                                  <form action="includes/logout.inc.php" method="post">
-                                    <button type="submit" class="btn">Logout</button>
-                                  </form>
-                                </ul>';
-                        }elseif (session_start()) {
+                        if (session_start()) {
                             echo '<ul class="navbar-nav ml-md-auto">
                                   <form action="includes/logout.inc.php" method="post">
                                     <button type="submit" class="btn">Logout</button>
@@ -33,8 +27,6 @@
                                 </ul>';
                         }
                     ?>
-                    
-                    
                 </div>     
             </nav>
         </header>

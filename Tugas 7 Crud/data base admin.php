@@ -1,6 +1,7 @@
 <?php
     require "header.php";
     include "includes/db.inc.php";
+    
     //Untuk Tombol Simpan
     if (isset($_POST['simpan'])) {
       //Pengujian data di edit atau di simpan baru
@@ -69,7 +70,7 @@
 ?>
 
 <main>
-    <title>Data Base</title>
+    <title>Data Base Admin</title>
     <!--Main Content-->
     <div class="container">
             <h1 class="text-center text-white">Data Base</h1>

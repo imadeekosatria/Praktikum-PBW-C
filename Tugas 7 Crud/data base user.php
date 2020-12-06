@@ -53,7 +53,7 @@
 ?>
 
 <main>
-    <title>Data Base</title>
+    <title>Data Base Pegawai</title>
     <!--Main Content-->
     <div class="container">
             <h1 class="text-center text-white">Data Base</h1>
@@ -89,31 +89,33 @@
                 <div class="card-header bg-secondary text-white">
                   Daftar Mahasiswa
                 </div>
-                <table class="table table-bordered table-striped">
-                    <tr class="text-center">
-                        <th>No.</th>
-                        <th>NIM</th>
-                        <th>Nama</th>
-                        <th>Alamat</th>
-                        <th>Aksi</th>
-                    </tr>
-                    <?php
-                        $no = 1;
-                        $tampil = mysqli_query($conn, "SELECT * FROM mhs order by nim asc");
-                        while ($data = mysqli_fetch_array($tampil)):
+                <div class="table-responsive-md">
+                    <table class="table table-bordered table-striped">
+                        <tr class="text-center">
+                            <th>No.</th>
+                            <th>NIM</th>
+                            <th>Nama</th>
+                            <th>Alamat</th>
+                            <th>Aksi</th>
+                        </tr>
+                        <?php
+                            $no = 1;
+                            $tampil = mysqli_query($conn, "SELECT * FROM mhs order by nim asc");
+                            while ($data = mysqli_fetch_array($tampil)):
 
-                    ?>
-                    <tr>
-                        <td><?=$no++?></td>
-                        <td><?=$data['nim']?></td>
-                        <td><?=$data['nama']?></td>
-                        <td><?=$data['alamat']?></td>
-                        <td class="text-center">
-                          <a href="data base.php?hal=edit&id=<?=$data['nim']?>" class="btn btn-outline-primary">Edit</a>
-                        </td>
-                    </tr>
-                        <?php endwhile; //Penutup While ?> 
-                </table>
+                        ?>
+                        <tr>
+                            <td><?=$no++?></td>
+                            <td><?=$data['nim']?></td>
+                            <td><?=$data['nama']?></td>
+                            <td><?=$data['alamat']?></td>
+                            <td class="text-center">
+                              <a href="data base.php?hal=edit&id=<?=$data['nim']?>" class="btn btn-outline-primary">Edit</a>
+                            </td>
+                        </tr>
+                            <?php endwhile; //Penutup While ?> 
+                    </table>
+                </div>
             </div>
             <!--Akhir Card Table-->
         </div>

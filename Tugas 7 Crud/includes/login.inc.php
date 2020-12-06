@@ -1,5 +1,4 @@
 <?php
-    session_start();
     include "dbh.inc.php";
     if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['usertype'])) {
         function validate($data){
@@ -31,12 +30,14 @@
                 $row = mysqli_fetch_assoc($result);
                 if ($row['username'] === $user && $row['password'] === $pwd && $row['typeuser'] === $type) {
                     if ($row['typeuser'] === 'admin') {
+                        session_start();
                         $_SESSION['username'] = $row=['username'];
                         $_SESSION['typeuser'] = $row=['typeuser'];
                         $_SESSION['id'] = $row=['id'];
                         header("Location: ../data base admin.php");
                         exit(); 
                     }elseif($row['typeuser'] === 'user'){
+                        session_start();
                         $_SESSION['username'] = $row=['username'];
                         $_SESSION['typeuser'] = $row=['typeuser'];
                         $_SESSION['id'] = $row=['id'];
