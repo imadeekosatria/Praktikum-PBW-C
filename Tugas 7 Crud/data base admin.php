@@ -1,4 +1,5 @@
 <?php
+    require "header.php";
     include "includes/db.inc.php";
     //Untuk Tombol Simpan
     if (isset($_POST['simpan'])) {
@@ -66,40 +67,11 @@
       }
     }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-        <link rel="stylesheet" href="CSS/mycss.css">
-        <title>Data Base</title>
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link colink" href="login.php">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Data Base</a>
-                </li>
-                </ul>
-                <ul class="navbar-nav ml-md-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Logout</a>
-                    </li>
-                </ul>
-            </div>     
-        </nav>
-        <!--Batas Nav Bar-->
-
-        <!--Main Content-->
-        <div class="container">
+<main>
+    <title>Data Base</title>
+    <!--Main Content-->
+    <div class="container">
             <h1 class="text-center text-white">Data Base</h1>
             <!--Awal Card Form-->
             <div class="card">
@@ -177,8 +149,4 @@
               } 
         </script> 
         <script type="text/javascript" src="CSS/bootstrap/js/bootstrap.js"></script>
-        
-    </body>
-</html>
-
-
+</main>

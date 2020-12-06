@@ -13,13 +13,17 @@
         $pwd = validate($_POST['password']);
         $type = validate($_POST['usertype']);
 
-        if (empty($user)) {
+        if (empty($user) && empty($pwd)) {
+            header("Location: ../index.php?error=username & password required");
+            exit();
+        }else if(empty($user)){
             header("Location: ../index.php?error=user name is required");
             exit();
-        }else if(empty($pwd)){
+        }elseif (empty($pwd)) {
             header("Location: ../index.php?error=password is required");
             exit();
-        }else{
+        }
+        else{
             $sql = "SELECT * FROM user WHERE username='$user' AND password='$pwd'";
             $result = mysqli_query($conn, $sql);
 
@@ -38,15 +42,18 @@
                         $_SESSION['id'] = $row=['id'];
                         header("Location: ../data base user.php");
                         exit();
+                    }else{
+                        header("Location: ../index.php?error=wrong usertype");
+                        exit();
                     }
                 }
             }else{
-                header("Location: ../index.php?error=incorrect username and password is required");
+                header("Location: ../index.php?error=incorrect username and password");
                 exit();
             }
         }
     }else{
-        header("Location: ../index.php");
+        header("Location: ../index.php?error=no user");
         exit();
     }
 ?>
