@@ -110,7 +110,7 @@
                             <td><?=$data['nama']?></td>
                             <td><?=$data['alamat']?></td>
                             <td class="text-center">
-                              <a href="data base.php?hal=edit&id=<?=$data['nim']?>" class="btn btn-outline-primary">Edit</a>
+                              <a href="data base user.php?hal=edit&id=<?=$data['nim']?>" class="btn btn-outline-primary">Edit</a>
                             </td>
                         </tr>
                             <?php endwhile; //Penutup While ?> 
