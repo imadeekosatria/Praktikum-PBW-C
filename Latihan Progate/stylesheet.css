@@ -1,0 +1,114 @@
+/* Reset CSS (JANGAN DIHAPUS) */
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p,
+form, input, div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Avenir Next";
+}
+
+li {
+  list-style: none;
+}
+
+/* Ketik code Anda dibawah */
+header{
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background-color: #26d0c9;
+  height: 90px;
+  
+}
+header span{
+    font-size: 36px;
+    padding: 20px 40px;
+}
+.nav ul{
+  display: flex;
+  padding: 33px 20px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/*Next Task*/
+.main h1{
+    font-size: 140px;
+}
+
+.main span{
+    color: #ff4a4a;
+}
+
+.main h2{
+    font-size: 60px;
+}
+
+.main{
+    margin: 100px 80px;
+}
+
+/*Next Task*/
+.content{
+    display: flex;
+    width: 100%;
+    column-gap: 40px;
+}
+
+.section p{
+    margin-top: 30px;
+    font-size: 24px;
+    margin-bottom: 60px;
+}
+.main h3{
+    width: 100%;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #dee7ec;
+    margin-bottom: 50px;
+    font-size: 28px;
+    margin-top:100px;
+}
+
+/*Next Task*/
+
+
+input, textarea{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 20px;
+    font-size: 18px;
+    border: 1px solid #dee7ec;
+    width: 400px;
+}
+
+
+input[type="submit"]{
+    color: #889eab;
+    background-color: #dee7ec;
+    align-items: center;
+}
+
+/*Next Task*/
+footer{
+    padding: 40px;
+    height: 120px;
+    width: 100%;
+    background-color: #2f5167;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-footer span{
+    font-size: 32px;
+}
+
+.nav-footer ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
